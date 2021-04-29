@@ -1,0 +1,229 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    opacity: 0.5;
+    /* #b61924 */
+    background-color: #C1292E;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+.container,
+.container-fluid {
+    position: absolute;
+}
+
+.hover-underline {
+    text-decoration: none;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+}
+
+.nav-item a {
+    transition: padding-left .25s ease-in-out;
+}
+
+.nav-item a:hover {
+    padding-left: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #343434;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+::selection {
+    color: #000;
+    background: #fff;
+}
+
+.skill-bars {
+    padding: 15px 20px;
+    width: 100%;
+    height:30vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.first .bar .progress-line.html span {
+    width: 20%;
+}
+/* 
+.bar .progress-line.css span {
+    width: 0%;
+} */
+
+.first .bar .progress-line.javascript-jquery span {
+    width: 90%;
+}
+
+.first .bar .progress-line.python span {
+    width: 60%;
+}
+
+.second .bar .progress-line.html span {
+    width: 90%;
+}
+
+.second .bar .progress-line.css span {
+    width: 90%;
+}
+
+.second .bar .progress-line.javascript-jquery span {
+    width: 80%;
+}
+
+.second .bar .progress-line.django span {
+    width: 80%;
+}
+
+
+.third .bar .progress-line.html span {
+    width: 100%;
+}
+
+.third .bar .progress-line.css span {
+    width: 70%;
+}
+
+.third .bar .progress-line.bootstrap span {
+    width: 80%;
+}
+
+.third .bar .progress-line.javascript-jquery span {
+    width: 80%;
+}
+
+.third .bar .progress-line.django span {
+    width: 100%;
+}
+
+
+.fourth .bar .progress-line.html span {
+    width: 90%;
+}
+
+.fourth .bar .progress-line.css span {
+    width: 40%;
+}
+
+.fourth .bar .progress-line.bootstrap span {
+    width: 80%;
+}
+
+.fourth .bar .progress-line.javascript-jquery span {
+    width: 20%;
+}
+
+.fourth .bar .progress-line.flask span {
+    width: 40%;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+}
