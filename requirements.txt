@@ -1,5 +1,6 @@
 click==7.1.2
 colorama==0.4.4
+django-crispy-forms==1.11.2
 Flask==1.1.2
 Flask-Admin==1.5.8
 Flask-SQLAlchemy==2.5.1
