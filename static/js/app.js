@@ -2,13 +2,20 @@ window.
 onload
   = function () {
     var myCollapse = document.getElementById('portfolioProjects')
-
+    
     $(".collapse-other").click(function () {
       var bsCollapse = new bootstrap.Collapse(myCollapse, {
         toggle: false
       })
       bsCollapse.hide()
     });
+    
+    var firstTabEl = document.querySelector('#portfolio-li span')
+    var firstTab = new bootstrap.Tab(firstTabEl)
+    
+    $("#portfolioButton").click(function () {
+      firstTab.show()
+    })
 
     Particles.
     init
